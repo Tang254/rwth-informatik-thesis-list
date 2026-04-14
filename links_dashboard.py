@@ -446,15 +446,6 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
     .url-link-cell:hover .url {{
       color: var(--accent);
     }}
-    .url-link-cell::after {{
-      content: "Open site";
-      margin-top: 10px;
-      font-size: 12px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      font-weight: 700;
-    }}
     .requirement,
     .empty {{
       margin: 0;
