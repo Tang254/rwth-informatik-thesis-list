@@ -1,0 +1,35 @@
+{
+  "defaults": {
+    "timeout_seconds": 20,
+    "user_agent": "ThesisMonitor/1.0 (+https://example.local)"
+  },
+  "notification": {
+    "channel": "console",
+    "smtp": {
+      "host": "smtp.example.com",
+      "port": 587,
+      "use_tls": true,
+      "use_ssl": false,
+      "username": "your_username",
+      "password": "your_password",
+      "from_email": "monitor@example.com",
+      "to_emails": [
+        "you@example.com"
+      ]
+    }
+  },
+  "watchers": [
+    {
+      "name": "Example News",
+      "url": "https://example.com/news",
+      "notification_channel": "console",
+      "strip_html": true,
+      "start_marker": "<main",
+      "end_marker": "</main>",
+      "ignore_patterns": [
+        "Last updated:\\s+[A-Za-z]+\\s+\\d{1,2},\\s+\\d{4}",
+        "\\b\\d{1,2}:\\d{2}\\s?(AM|PM)\\b"
+      ]
+    }
+  ]
+}

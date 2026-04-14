@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThesisMonitor Dashboard</title>
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --bg-strong: #efe4d0;
+      --surface: rgba(255, 251, 245, 0.88);
+      --surface-strong: #fffdf8;
+      --ink: #1f1f1a;
+      --muted: #5c5a50;
+      --accent: #0d6b58;
+      --accent-soft: #d5ede6;
+      --warn: #b55d1d;
+      --warn-soft: #f8dfc8;
+      --border: rgba(31, 31, 26, 0.1);
+      --shadow: 0 18px 40px rgba(80, 54, 24, 0.12);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(13,107,88,0.14), transparent 32%),
+        radial-gradient(circle at top right, rgba(181,93,29,0.15), transparent 28%),
+        linear-gradient(180deg, var(--bg) 0%, #fbf8f2 42%, #f1ece2 100%);
+      min-height: 100vh;
+    }
+    .wrap {
+      width: min(1200px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 40px 0 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(255,253,248,0.88), rgba(239,228,208,0.92));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+    .kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 5vw, 68px);
+      line-height: 0.98;
+      font-weight: 700;
+    }
+    .lede {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 14px;
+      margin-bottom: 0;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-top: 26px;
+    }
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.54);
+      padding: 16px 18px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 6px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 280px;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      transition: transform 160ms ease;
+    }
+    .status {
+      display: inline-flex;
+      align-self: flex-start;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .status.good {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+    .status.warn {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 25px;
+      line-height: 1.15;
+    }
+    .meta {
+      font-family: "Courier New", monospace;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 16px;
+    }
+    .highlights {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.55;
+      color: var(--ink);
+      flex: 1;
+    }
+    .empty {
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .preview {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .source {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .link {
+      display: inline-block;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(100vw - 20px, 1200px); padding-top: 20px; }
+      .hero, .card { border-radius: 22px; }
+      h1 { font-size: 42px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="kicker">ThesisMonitor Dashboard</div>
+      <h1>Current Bachelor Thesis Signals</h1>
+      <p class="lede">This page is a local summary generated from the configured RWTH and partner institute thesis pages. It surfaces likely bachelor-thesis openings, links back to the source pages, and flags pages that still need manual review.</p>
+      <div class="stats">
+        <div class="stat"><strong>37</strong> tracked pages</div>
+        <div class="stat"><strong>0</strong> pages with likely openings</div>
+        <div class="stat"><strong>37</strong> pages needing review</div>
+        <div class="stat"><strong>2026-04-14T14:32:31+00:00</strong> generated at</div>
+      </div>
+    </section>
+    <section class="grid">
+      
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>AI Methodology</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.aim.rwth-aachen.de/thesis.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Business Process Management Foundations and Engineering</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://bpm.rwth-aachen.de/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Combinatorial Optimization</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Communication and Distributed Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.comsys.rwth-aachen.de/teaching/available-theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computation in Neural Circuits</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computational Network Science</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.netsci.rwth-aachen.de/teaching/papers-theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computer Animation</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://animation.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computer Graphics, Geometry and Multimedia</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.graphics.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computer Science Education</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Computer Vision</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.vision.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Cooperation Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Data Science in Mechanical Engineering</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Data Stream Management and Analysis</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Embedded Software</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>High Performance Computing</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Information Systems and Databases</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>IT Security</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Knowledge-Based Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://kbsg.rwth-aachen.de/theses/open_theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Learning Technologies</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Life Science Informatics</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/digital-health.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Logic and Theory of Discrete Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Machine Learning and Human Language Technology</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Machine Learning and Reasoning</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://ml.rwth-aachen.de/theses/open-topics/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Machine learning on graphs</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://log-rwth.github.io/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Management Science</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Mathematical Foundations of Computer Science</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://logic.rwth-aachen.de/Research/index.html.en" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Media Computing Group</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://hci.rwth-aachen.de/jobs" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Operating Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.os.rwth-aachen.de/teaching/theses-overview.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Process and Data Science</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Quantum Information Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://qis.rwth-aachen.de/teaching/thesis/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Risk Management And Decision Support</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Security and Privacy in Industrial Cooperation</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.spice.rwth-aachen.de/teaching/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Software and Tools for Computational Engineering</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.stce.rwth-aachen.de/theses" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Software Construction</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Software Engineering</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://www.se-rwth.de/theses/BA.interpret.efficient/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Theory of Hybrid Systems</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://ths.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+
+<article class="card">
+  <div class="status warn">error: &lt;urlopen error [WinError 10061] 由于目标计算机积极拒绝，无法连接。&gt;</div>
+  <h2>Virtual Reality and Immersive Visualization</h2>
+  <div class="meta">unknown</div>
+  <div class="empty">No confident bachelor-thesis snippets were detected automatically. This page may still contain openings, but it likely needs tighter extraction rules or a manual check.</div>
+  <div class="preview">Unable to fetch or parse this page during dashboard generation.</div>
+  <div class="actions">
+    <span class="source">Source: error</span>
+    <a class="link" href="https://vr.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open source</a>
+  </div>
+</article>
+
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,573 @@
+{
+  "generated_at": "2026-04-14T14:46:14+00:00",
+  "records": [
+    {
+      "name": "AI Methodology",
+      "url": "https://www.aim.rwth-aachen.de/thesis.html",
+      "fetched_at": "2026-04-14T14:46:12+00:00",
+      "content_hash": "9cc600dc5540b08862be22a3d9f725bc161db0fd82ca4fc1b77c4dd4408c7045",
+      "source": "live",
+      "summary": {
+        "status": "exact openings found",
+        "openings": [
+          {
+            "title": "[BSc/MSc] Open Topics in Automated Machine Learning",
+            "summary": "Performance of AI algorithms is sensitive to various design decisions, which creates a considerable bottleneck for new users to deploy such methods in practice. Automated machine learning (AutoML) aims to make these decisions in an automated way using prior knowledge. In our chair, we have various open thesis topics in AutoML such as hyperparameter optimisation, algorithm configuration, algorithm selection, performance prediction and more. For more information, please contact Hadar Shavit .",
+            "url": "https://www.aim.rwth-aachen.de/thesis.html",
+            "degree": ""
+          }
+        ],
+        "opening_count": 1,
+        "mode": "strict"
+      },
+      "content_preview": "Education and teaching at the Chair for AI Methodology at RWTH Aachen University\nResearch\nEducation\nTheses\nPeople\nJobs\nMedia\nEvents\nNews\nContact\nThesis projects\nWe are always interested in meeting passionate students. Please, explore the research focus of our chair and the\nresearch areas of our staff to see where yo..."
+    },
+    {
+      "name": "Knowledge-Based Systems",
+      "url": "https://kbsg.rwth-aachen.de/theses/open_theses/",
+      "fetched_at": "2026-04-14T14:46:05+00:00",
+      "content_hash": "10364d05ba8e387147e3a6118153222f597c12dc95a8b3e54012d8784a230c6f",
+      "source": "live",
+      "summary": {
+        "status": "exact openings found",
+        "openings": [
+          {
+            "title": "M.Sc. On the Progression of Higher-order Belief in Multi-agent Systems",
+            "summary": "",
+            "url": "https://kbsg.rwth-aachen.de/theses/open_theses/feng_progress_mas/",
+            "degree": ""
+          }
+        ],
+        "opening_count": 1,
+        "mode": "strict"
+      },
+      "content_preview": "Open Theses - Knowledge-Based Systems Group\nTeaching\nTheses\nPublications\nProjects\nStaff\nJobs\nContact\nKnowledge-Based Systems Group\nProf. Gerhard Lakemeyer, Ph.D.\nTeaching\nCurrent semester\nAll semesters\nSeminar Guidelines\nTheses\nThesis Guidelines\nOpen Theses\nCompleted Theses\nPublications\nProjects\nStaff\nJobs\nContact\nM..."
+    },
+    {
+      "name": "Machine Learning and Reasoning",
+      "url": "https://ml.rwth-aachen.de/theses/open-topics/",
+      "fetched_at": "2026-04-14T14:46:06+00:00",
+      "content_hash": "f49ec417f6a6d01491fa8d87a2cd3399462539e213c2ead65471906b4f6609bc",
+      "source": "live",
+      "summary": {
+        "status": "exact openings found",
+        "openings": [
+          {
+            "title": "An Empirical Study of GNN-Based Heuristics in Robotic Tasks",
+            "summary": "The goal of this thesis is to learn and evaluate the generalization using Graph Neural Networks (GNNs) for robotic planning tasks.",
+            "url": "https://ml.rwth-aachen.de/theses/open-topics/learning-heuristic-for-robotics/",
+            "degree": ""
+          }
+        ],
+        "opening_count": 1,
+        "mode": "strict"
+      },
+      "content_preview": "Chair of Machine Learning and Reasoning (i6) | Open Topics\nHome\nPeople\nResearch\nPublications\nSoftware\nTeaching\nSS 26\nWS 25/26\nSS 25\nWS 24/25\nSS 24\nWS 23/24\nSS 23\nTheses\nGuidelines\nOpen Topics\nCompleted Theses\nEvents\nOpen Topics\nAn Empirical Study of GNN-Based Heuristics in Robotic Tasks\nThe goal of this thesis is to..."
+    },
+    {
+      "name": "Quantum Information Systems",
+      "url": "https://qis.rwth-aachen.de/teaching/thesis/",
+      "fetched_at": "2026-04-14T14:46:12+00:00",
+      "content_hash": "414d6e46078990e4e30fd029a1e7f1abd65a836b1ff269129844ab21770a20c4",
+      "source": "live",
+      "summary": {
+        "status": "exact openings found",
+        "openings": [
+          {
+            "title": "Precise complexity of the compressed oracle",
+            "summary": "In quantum cryptography, the \u201ccompressed oracles\u201d method (going back to Zhandry\u2019s paper ), is a powerful technique to reason about random-oracles, which in turn are a widely used modeling of hash functions. While the compressed oracle has a reasonably simple abstract description which is enough for many cryptographic proofs, for some proofs we need to know how efficient/inefficient it is to actually implement a compressed oracles as a quantum algorithm. The goal of this thesis would be to study efficient algorithms for implementing the compressed oracle to find out what the complexity of it actually is. This would include several (or all) of the following tasks: Identification and use of suitable quantum datastructures Design of the algorithm Runtime analysis of the algorithm Demo implementation Formal verification that the algorithm does what it should Supervisor: Dominique Unruh Ideal background: Quantum computing, programming (from the theory point of view), algorithms, datastructures.",
+            "url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html",
+            "degree": "Master",
+            "source_url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html"
+          },
+          {
+            "title": "Something with theorem proving",
+            "summary": "Isabelle/Coq/Lean/etc. Easycrypt/qrhl-tool/etc. (Description follows.) Decision procedures for quantum references In a recent work of mine , I introduced the concept of quantum references. This is a theoretical tool for the use in quantum programming semantics and quantum program logics to meaningfully refer to a subsystem of quantum system (a formalization of what a \u201cwire\u201d is in a quantum circuit, so to say). In an ongoing project in the theorem prover Isabelle/HOL ( qrhl-tool ), I am using quantum references to reason about program variables and operations on them etc. This leads to a lot of questions that need to be checked automatically by the computer, e.g., whether a given construction built from individual references is a reference again, whether one reference is a strict superset of another reference, etc. The topic of this thesis would be to develop decision procedures (algorithms) for answering all those questions and to implement them (preferably in Standard/ML, inside Isabelle/HOL). Supervisor: Dominique Unruh Ideal background: Quantum computing, functional programming, algorithms",
+            "url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html",
+            "degree": "Master or Bachelor",
+            "source_url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html"
+          },
+          {
+            "title": "Code generation for Isabelle/HOL",
+            "summary": "The theorem prover Isabelle/HOL contains something called \u201ccode generation\u201d which converts theorems (e.g., a theorem stating under which conditions a number is prime) into executable code. This has two benefits: One can then automatically prove facts (such as the primality of a number) by running the program. One can produce proven correct programs automatically. The drawback of the existing approach is: Many things happen automatically, this makes it often hard to understand what exactly is happening (from the user side). There are many restrictions/conditions (especially when type-classes are involved) that lead to code generation rules are rejected. It is possible to misconfigure the existing code generation so that it produces wrong code and wrong theorems. The idea of this thesis is to implement a different code generation mechanism following the following ideas: Design a simple, special purpose lambda calculus (with semantics) Write (manually) theorems such as L checks primality where L is a concrete lambda-expression. Have an automated (sound) mechanism for deriving facts such as L evaluates to X . (Isabelle kernel extension?) Plug these together to, e.g., automatically prove 97 is prime . Anything that can be expressed using the existing code generation should be expressible this way as well. Supervisor: Dominique Unruh Ideal background: Functional programming theory, theorem proving",
+            "url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html",
+            "degree": "Master",
+            "source_url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html"
+          },
+          {
+            "title": "Verifying operations/borrows in Q#",
+            "summary": "The quantum programming language Q# has the feature to define \u201coperations\u201d (basically quantum programs representing quantum circuits). These come with built-in support for \u201cadjoint\u201d (inverses) and \u201ccontrolled operations\u201d. These can be either auto-generated or programmer-provided. Additionally, Q# has a feature to \u201cborrow\u201d qubits from other computation steps to use as so called \u201cdirty\u201d ancillae (these are auxiliary qubits that are guaranteed to be put back into exactly the state they came from). In all these cases, it is left to the programmer to make sure these these features are used \u201ccorrectly\u201d (i.e. doesn\u2019t violate the assumptions made about adjoints, controlled operations, borrowing), while no precise definition of \u201ccorrect\u201d is available. The topic of this thesis would be: Provide formal definitions of what \u201ccorrect\u201d behavior of adjoints/controlled operations/borrowing would mean. (This probably includes writing a formal semantics for a fragment of Q#.) Come up with methods to automatically check these conditions (verification tool). Supervisor: Dominique Unruh Ideal background: Quantum computing, programming (from the theory point of view), algorithms, datastructures.",
+            "url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html",
+            "degree": "Master",
+            "source_url": "https://qis.rwth-aachen.de/teaching/thesis/topics.html"
+          }
+        ],
+        "opening_count": 4,
+        "mode": "strict"
+      },
+      "content_preview": "Bachelor / Master Thesis -\nSkip to primary navigation\nSkip to content\nSkip to footer\nToggle search\nToggle menu\nBachelor / Master Thesis\nContents\nIntro\nHow to apply\nTopics\nAbout external theses\nFinished theses\nIntro\nOur chair supervises bachelor and master theses related to the research topics of interest in our chai..."
+    },
+    {
+      "name": "Business Process Management Foundations and Engineering",
+      "url": "https://bpm.rwth-aachen.de/",
+      "fetched_at": "2026-04-14T14:46:10+00:00",
+      "content_hash": "06a43d9238e67f981750c9ad14e0f4729f0a39caf6552e4087a87e4330e8e9b0",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Business Process Management: foundations and engineering\nThe Business Process Management: foundations and engineering (BPM) group is a group in the Informatik i9 chair of the RWTH Aachen University. The focus of the BPM group is on the combination of data-based process analysis and the optimisation of processes in o..."
+    },
+    {
+      "name": "Combinatorial Optimization",
+      "url": "https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses",
+      "fetched_at": "2026-04-14T14:46:08+00:00",
+      "content_hash": "a5b4d72ba854d45dd85299656d44c75fd7d012f6ca0814946887e39c0e691153",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Past Theses\n|\nChair of Combinatorial Optimization\nAbout\nTeaching\nTeam\nPublications\nContact\nAbout\nTeaching\nPast Theses\nPast- and Ongoing Theses\nFind a list of the talks and their details from all theses that took and currently are taking place at our chair, below.\nLooking for a thesis?\nIf you are interested in writin..."
+    },
+    {
+      "name": "Communication and Distributed Systems",
+      "url": "https://www.comsys.rwth-aachen.de/teaching/available-theses/",
+      "fetched_at": "2026-04-14T14:46:01+00:00",
+      "content_hash": "0b31b3470b543ac07ff41b82f39389f0855559ef23ec43e6240a66cd48875844",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Available Theses | COMSYS | RWTH Aachen University\nSearch\nHome\nTeam\nStaff Overview\nAlumni\nResearch Alumni\nStudent Alumni\nTeaching\nOverview\nThesis Topics\nThesis Process\nPhD Process\nAvailable Theses\nOngoing Theses\nPast Theses\nPast PhD Theses\nPermanent Services\nThesis Examiner\nOral Exams\nCourses\nCurrent Courses\nUpcomin..."
+    },
+    {
+      "name": "Computation in Neural Circuits",
+      "url": "https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut",
+      "fetched_at": "2026-04-14T14:46:00+00:00",
+      "content_hash": "c6ac9479d0cc739fc470a9fa2372beff0f307127c08ef4a00ce2863ecf1c75c0",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Career\nSkip to main contentSkip to navigationSkip to footer\nde en\nInstitute for Advanced Simulation (IAS)\nInstitute for Advanced Simulation (IAS-6), Computational and Systems Neuroscience\nResearch\nComputational Neurophysics\n\u25beTeam Future Simulation Architectures\nStatistical Neuroscience\n\u25beTeam Data Science of Electro-..."
+    },
+    {
+      "name": "Computational Network Science",
+      "url": "https://www.netsci.rwth-aachen.de/teaching/papers-theses/",
+      "fetched_at": "2026-04-14T14:46:13+00:00",
+      "content_hash": "12c42972a2c08146f556de9ed95e1ba7ae0f7c1bb04f8541182b18e9839e7851",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Research Papers and Theses | Computational Network Science | RWTH Aachen University\nOpen main menu\nTeamResearchPublicationsTeaching\nResearch Papers and Theses\nThesis, General\nPlease send inquiries only to teaching-netsci@cs.rwth-aachen.de and be sure to use the [thesis] tag in your email.\nWe offer a broad range of t..."
+    },
+    {
+      "name": "Computer Animation",
+      "url": "https://animation.rwth-aachen.de/theses/",
+      "fetched_at": "2026-04-14T14:46:09+00:00",
+      "content_hash": "a03d22ed8f2d71da00abc09c249b929855483b66ef62c6005b710523181460ee",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses - Computer Animation\nHome\nContact\nStaff\nResearch\nPublications\nSoftware\nTeaching\nTheses\nCompleted Theses\nJobs\nImpressum\nBachelor and Master Theses\nWe permanently offer topics for bachelor and master thesis projects in all areas of our research field and in related areas. Currently, the research of our group co..."
+    },
+    {
+      "name": "Computer Graphics, Geometry and Multimedia",
+      "url": "https://www.graphics.rwth-aachen.de/theses/",
+      "fetched_at": "2026-04-14T14:46:08+00:00",
+      "content_hash": "2bd2a33b863798da51b5bd0fd0c660aaeca104b7a236db97168f15a09f139d2b",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses - Computer Graphics and Multimedia\nHome\nContact\nStaff\nResearch\nPublications\nSoftware\nTeaching\nTheses\nJobs\nImpressum\nBachelor and Master Theses\nWe permanently offer proposals for bachelor and master thesis projects in all areas across our research activities (see our publication page) and related subjects whic..."
+    },
+    {
+      "name": "Computer Science Education",
+      "url": "https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:10+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Computer Vision",
+      "url": "https://www.vision.rwth-aachen.de/theses/",
+      "fetched_at": "2026-04-14T14:46:12+00:00",
+      "content_hash": "62fbb9821c16fd6164f8bd8c9cb018bc670a14a817fff1b98cf030c0dbd2ab09",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses - Computer Vision\nHome\nContact\nStaff\nResearch\nPublications\nSoftware\nTeaching\nTheses\nCompleted Theses\nJobs\nProjects\nDatasets\nImpressum\nBachelor and Master Theses\nWe permanently offer proposals for bachelor and master thesis topics. Please note the following requirements and restrictions:\nEligibility Criteria:..."
+    },
+    {
+      "name": "Cooperation Systems",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html",
+      "fetched_at": "2026-04-14T14:46:05+00:00",
+      "content_hash": "078af12c48860f5afa0883d0a090eaec95699adc667eae74a51ba9db1803a870",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Cooperation Systems - Fraunhofer FIT\nSearch\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer-Gesellschaft\nPress | Media\nJobs | Career\nContact\nDeutsch\nAbout us\n[X]\nAbout us\nDirector\nBoard of Curators\nUniversity Linkages\nFraunhofer Perso..."
+    },
+    {
+      "name": "Data Science in Mechanical Engineering",
+      "url": "https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:14+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Data Stream Management and Analysis",
+      "url": "https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/",
+      "fetched_at": "2026-04-14T14:46:06+00:00",
+      "content_hash": "6664f3372035b7b66c177e8733495c0e9ef23e0ac48d6f235c61840e21c97ada",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Thesis Projects \u00ab DBIS\nHome\nInformation Systems & Databases\nNews\nProjects\nStaff\nJob Offers\nAcademics\nCourses\nThesis Projects\nResearch\nPublications\nResources\nLog in\nCategories\nPages\n-\n-\nCourses\ni5\nJobs\nLabs\nLectures\nNews\nProjects\nResearch Fields\nRFC\nSeminars\nTheses\nUncategorized\nWorking Groups\n-\nHome\nInformation Syst..."
+    },
+    {
+      "name": "Embedded Software",
+      "url": "https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1",
+      "fetched_at": "2026-04-14T14:46:11+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "High Performance Computing",
+      "url": "https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1",
+      "fetched_at": "2026-04-14T14:46:11+00:00",
+      "content_hash": "db314d8fc0bb6e3226bdf8d0ab3f59f8946232b7adda27db466aa22dbe3e7cdd",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "High Performance Computing | High Performance Computing (Computer Science 12) | RWTH Aachen University | EN\nSkip to Content\nSkip to Main Navigation\nSkip to Quick Access\nSkip to Search\nSkip to Footer\nTools\nRWTHonline\nRWTHcontacts\nRWTHmoodle\nIntranet\nServices\nDining Hall Menus\nRWTH Navigator\nStudent Resources and Supp..."
+    },
+    {
+      "name": "Information Systems and Databases",
+      "url": "https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/",
+      "fetched_at": "2026-04-14T14:46:02+00:00",
+      "content_hash": "6664f3372035b7b66c177e8733495c0e9ef23e0ac48d6f235c61840e21c97ada",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Thesis Projects \u00ab DBIS\nHome\nInformation Systems & Databases\nNews\nProjects\nStaff\nJob Offers\nAcademics\nCourses\nThesis Projects\nResearch\nPublications\nResources\nLog in\nCategories\nPages\n-\n-\nCourses\ni5\nJobs\nLabs\nLectures\nNews\nProjects\nResearch Fields\nRFC\nSeminars\nTheses\nUncategorized\nWorking Groups\n-\nHome\nInformation Syst..."
+    },
+    {
+      "name": "IT Security",
+      "url": "https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:01+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Learning Technologies",
+      "url": "https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:09+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Life Science Informatics",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/digital-health.html",
+      "fetched_at": "2026-04-14T14:46:05+00:00",
+      "content_hash": "7b89d3020d98411ad067da9415ed9eede12fba9a6ce11814f3ca7eb91081478b",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Digital Health - Fraunhofer FIT\nSearch\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer-Gesellschaft\nPress | Media\nJobs | Career\nContact\nDeutsch\nAbout us\n[X]\nAbout us\nDirector\nBoard of Curators\nUniversity Linkages\nFraunhofer Personnel..."
+    },
+    {
+      "name": "Logic and Theory of Discrete Systems",
+      "url": "https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:07+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Machine Learning and Human Language Technology",
+      "url": "https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html",
+      "fetched_at": "2026-04-14T14:46:07+00:00",
+      "content_hash": "560d8078e3c1c499a45630733b5ba1b4395af16d3bc771430c9ebc6337c5baff",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "i6 - zentral: Language Processing and Pattern Recognition"
+    },
+    {
+      "name": "Machine learning on graphs",
+      "url": "https://log-rwth.github.io/",
+      "fetched_at": "2026-04-14T14:46:07+00:00",
+      "content_hash": "1227038c807fc820dc12fb0e4858c8707e9f9df7d14eaf41f1d247b93913661b",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Learning on Graphs\nWelcome\nGroup Members\nPublications\nTeaching\nThesis\nWelcome\nGroup Members\nPublications\nTeaching\nThesis\nLearning on Graphs\nRWTH Aachen University\nAt the Learning on Graphs group, led by Christopher Morris at the Chair of Machine Learning and Reasoning at RWTH Aachen University, we are developing the..."
+    },
+    {
+      "name": "Management Science",
+      "url": "https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:13+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Mathematical Foundations of Computer Science",
+      "url": "https://logic.rwth-aachen.de/Research/index.html.en",
+      "fetched_at": "2026-04-14T14:46:08+00:00",
+      "content_hash": "e821cb9922d3895dd43a593baea2d7de58c45d368e027b4366b44889e3e7e125",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MGI - Research\nMathematical Foundations of Computer Science\nProf. Dr. Erich Gr\u00e4del\nDeutsch\nEnglish\nResearch\nLogic\nOur research interests are mainly focused on finite and\nalgorithmic model theory (i.e., model theory of finitely\nrepresentable infinite structures, e.g. automatic structures),\nand descriptive complexity..."
+    },
+    {
+      "name": "Media Computing Group",
+      "url": "https://hci.rwth-aachen.de/jobs",
+      "fetched_at": "2026-04-14T14:46:11+00:00",
+      "content_hash": "ab4c531cbead09b861d31824f0af4fda3058e5d8d274bc5f6c61e11567a5bdc8",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Jobs at the Media Computing Group - Media Computing Group - RWTH Aachen University\nOur Lab\nBack\nPeople\nFab Lab\nNews\nIn the Press\nResearch\nBack\nOverview\nPublications\nPROJECTS\nPersonal Orchestra\nSKIRIM\nDEUS\nShow More Projects \u25b7\nBack\nEPP\nTABULA\nTerra Mosana\nRIME\nTeaching\nBack\nOverview\nWINTER SEMESTER\nDesigning Interact..."
+    },
+    {
+      "name": "Operating Systems",
+      "url": "https://www.os.rwth-aachen.de/teaching/theses-overview.html",
+      "fetched_at": "2026-04-14T14:46:01+00:00",
+      "content_hash": "59b1b37d72fd9badb4b72fbd2b5f69fd2cc485a827f9d1484f497a10091f6ab4",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Thesis Process Overview \u2013 Operating Systems Teaching and Research Unit\nHome\nTeaching\nResearch\nTeam\nContact\nTheses\nThesis Process Overview\nCourses\nCourse Overview\nOperating Systems and System Software\nLinux Kernel Programming\nAdvanced Operating Systems\nPractical Labs\nSeminars\nTheses\nThesis Process Overview\nAvailable..."
+    },
+    {
+      "name": "Process and Data Science",
+      "url": "https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/",
+      "fetched_at": "2026-04-14T14:46:09+00:00",
+      "content_hash": "df31a01989a20669c7100c596c5c9178d470718678c04dac6ac52c4250c71c55",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "MESSAGE\nServer initializing, bitte warten ..."
+    },
+    {
+      "name": "Risk Management And Decision Support",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html",
+      "fetched_at": "2026-04-14T14:46:05+00:00",
+      "content_hash": "c9de89a72701688dd6d45a548a63687107c92ed9fb56ecca660084e01eed6ece",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Teaching - Fraunhofer FIT\nSearch\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer Institute for Applied Information Technology FIT\nFraunhofer-Gesellschaft\nPress | Media\nJobs | Career\nContact\nDeutsch\nAbout us\n[X]\nAbout us\nDirector\nBoard of Curators\nUniversity Linkages\nFraunhofer Personnel Certif..."
+    },
+    {
+      "name": "Security and Privacy in Industrial Cooperation",
+      "url": "https://www.spice.rwth-aachen.de/teaching/",
+      "fetched_at": "2026-04-14T14:46:01+00:00",
+      "content_hash": "109e369ac09567105f307b9223790022c2afda4eeec6ed84d430a19099b4c95c",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Teaching | Security and Privacy in Industrial Cooperation\nToggle navigation\nHome\nTeam\nTeaching(current)\nResearch\nPublications\nOpen Positions\nContact\nTeaching\nCourses\nSS 2026\nLecture: Industrial Data Security (Master)\nSS 2026\nLab: Industrial Intrusion Detection (Master)\nWS 2025/26\nSeminar: Industrial Security (Bachel..."
+    },
+    {
+      "name": "Software and Tools for Computational Engineering",
+      "url": "https://www.stce.rwth-aachen.de/theses",
+      "fetched_at": "2026-04-14T14:46:12+00:00",
+      "content_hash": "71b8929091686f7a5583e7b5222504aa0fd8b3dd30e2dd986a7d83516f27972b",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses \u2014 i12: STCE\nLog in\nToggle navigation\nHome\nTeaching\nResearch\nPeople\nTheses\nContact\nYou are here:\nHome\nTheses\nNavigation\nCompleted PhDs\nAdjointsForDataFlowArchitectures.pdf\nBehavioralProfiling.pdf\nBehavioralProfiling.pdf\nTheses\nBachelor/Master Thesis Topics\nWe aim for integration of both Bachelor and Master the..."
+    },
+    {
+      "name": "Software Construction",
+      "url": "https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/",
+      "fetched_at": "2026-04-14T14:45:59+00:00",
+      "content_hash": "2997813f8e3d29af8e9c0c9bbbafb407eaff4374aa6dd0974879d054b475f76e",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Evaluating Key Factors in Organizational Modernization - Research Group Software Construction\nSWC\nTeaching\nCourses\nCourses\nSoftware Project Labs\nFormer Courses\nBachelor & Master Thesis\nOpen Topics\nCurrent Projects\nCompleted Projects\nProcedure\nOther Teaching Activities\nDepth-area Oral Colloquium\nResearch\nResearch Pro..."
+    },
+    {
+      "name": "Software Engineering",
+      "url": "https://www.se-rwth.de/theses/BA.interpret.efficient/",
+      "fetched_at": "2026-04-14T14:45:59+00:00",
+      "content_hash": "b52b534544ccd863ad46be05e7fb3fb7a7d1ab51e844d7efbdffe01411b0552b",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Bachelorthesis: Efficient Interpretation of Expressions and Statements in MontiCore |\nSE@RWTH\nToggle navigation\nEssays\nEssay List\nDigital Twin\nDigital Companion\nDigital Twin Maturity Model\nExplicit versus Implicit Models\nDSLs f\u00fcr Gesetze und Ordnungen (in D)\nResearch Software Engineering (RSE)\nModeling in Advanced S..."
+    },
+    {
+      "name": "Theory of Hybrid Systems",
+      "url": "https://ths.rwth-aachen.de/theses/",
+      "fetched_at": "2026-04-14T14:45:59+00:00",
+      "content_hash": "86f7a125a84ff07841cc27a7475067f25ba2b6a420351ba65f558b1e171fcfae",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses | Theory of Hybrid Systems\nHome\nPeople\nTeaching\nTheses\nResearch\nHighschool Activities\nPress\nContact\nMOVES\nBrowsing: \u00bb\nHome\n\u00bbTheses\nTheses\nIf you are interested in writing a thesis at our research group, please contact us via email.\nIf you are interested in hybrid systems verification, SMT solving, or probabil..."
+    },
+    {
+      "name": "Virtual Reality and Immersive Visualization",
+      "url": "https://vr.rwth-aachen.de/theses/",
+      "fetched_at": "2026-04-14T14:46:12+00:00",
+      "content_hash": "4aa65f5ed5fd44901abd8eb89909cdb7f2a2a21a8d966f61a80723978749d1d4",
+      "source": "live",
+      "summary": {
+        "status": "unsupported",
+        "openings": [],
+        "opening_count": 0,
+        "mode": "strict"
+      },
+      "content_preview": "Theses - Virtual Reality and Immersive Visualization\nHome\nContact\nStaff\nResearch\nPublications\nSoftware\nTeaching\nTheses\nCompleted Theses\nJobs\nHardware &\nInfrastructure\nHelp our Research\nServices\nImpressum\nBachelor and Master Theses\nWe regularly offer proposals for bachelor and master thesis projects in all areas acro..."
+    }
+  ]
+}

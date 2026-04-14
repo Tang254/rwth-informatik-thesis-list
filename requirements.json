@@ -1,0 +1,156 @@
+{
+  "labels": {
+    "primary": "Original",
+    "secondary": "English"
+  },
+  "items": {
+    "Theory of Hybrid Systems": {
+      "primary": "Hybrid systems verification\na strong interest in mathematics and formal methods",
+      "secondary": "Hybrid systems verification\nA strong interest in mathematics and formal methods"
+    },
+    "Software Engineering": {
+      "primary": "Efficient Interpretation of Expressions and Statements in MontiCore\nInterest in compiler design and type systems\nLecture SLE\nPrior knowledge regarding interpreters",
+      "secondary": "Efficient Interpretation of Expressions and Statements in MontiCore\nInterest in compiler design and type systems\nSLE lecture\nPrior knowledge of interpreters"
+    },
+    "Software Construction": {
+      "primary": "Evaluating Key Factors in Organizational Modernization",
+      "secondary": "Evaluating Key Factors in Organizational Modernization"
+    },
+    "Computation in Neural Circuits": {
+      "primary": "Computation in Neural Circuits\nInformation processing and learning in neuronal networks, high performance simulation software and related ecosystem, algorithms for neuromorphic computing",
+      "secondary": "Computation in Neural Circuits\nInformation processing and learning in neuronal networks, high-performance simulation software and related ecosystems, and algorithms for neuromorphic computing"
+    },
+    "Communication and Distributed Systems": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\nPDF abstract, 成绩单，thesis时间需求",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nPDF abstract, transcript, and expected thesis timeline"
+    },
+    "IT Security": {
+      "primary": "Security Education for Children",
+      "secondary": "Security Education for Children"
+    },
+    "Security and Privacy in Industrial Cooperation": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\nPython, C, basic knowledge of security",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nPython, C, and basic security knowledge"
+    },
+    "Operating Systems": {
+      "primary": "暂时没有放出的题目，但鼓励自带题目\nEnglish, abstract, 成绩单",
+      "secondary": "No topics are publicly listed at the moment, but bringing your own topic is encouraged.\nEnglish, abstract, transcript"
+    },
+    "Information Systems and Databases": {
+      "primary": "暂时没有放出的题目，未见主动联系",
+      "secondary": "No topics are currently listed, and proactive contact was not observed."
+    },
+    "Knowledge-Based Systems": {
+      "primary": "暂时没有放出的题目，未见主动联系\nMaLo/BuK等高绩点",
+      "secondary": "No topics are currently listed, and proactive contact was not observed.\nHigh grades in courses such as MaLo/BuK"
+    },
+    "Life Science Informatics": {
+      "primary": "",
+      "secondary": ""
+    },
+    "Cooperation Systems": {
+      "primary": "",
+      "secondary": ""
+    },
+    "Risk Management And Decision Support": {
+      "primary": "",
+      "secondary": ""
+    },
+    "Data Stream Management and Analysis": {
+      "primary": "",
+      "secondary": ""
+    },
+    "Machine Learning and Reasoning": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\n4个月的全职工作，至少一门相关的课",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nFour months of full-time work and at least one relevant course"
+    },
+    "Machine Learning and Human Language Technology": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\nASR, NLU",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nASR, NLU"
+    },
+    "Machine learning on graphs": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged."
+    },
+    "Logic and Theory of Discrete Systems": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\n至少一门选修课",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nAt least one elective course"
+    },
+    "Mathematical Foundations of Computer Science": {
+      "primary": "暂时没有放出的题目，未见主动联系",
+      "secondary": "No topics are currently listed, and proactive contact was not observed."
+    },
+    "Combinatorial Optimization": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged."
+    },
+    "Computer Graphics, Geometry and Multimedia": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\n上过Basic Techniques in Computer Graphics（ws）",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nShould have taken Basic Techniques in Computer Graphics (winter semester)"
+    },
+    "Computer Animation": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\nC/C++",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nC/C++"
+    },
+    "Process and Data Science": {
+      "primary": "有四个题目，但是都需要process mining的知识\nRust, Python, Java, React",
+      "secondary": "There are four topics, but all of them require process mining knowledge.\nRust, Python, Java, React"
+    },
+    "Learning Technologies": {
+      "primary": "教育所，可以自己考虑题目（自学平台之类的开发？）",
+      "secondary": "Learning Technologies group; you can also consider proposing your own topic, for example development related to self-learning platforms."
+    },
+    "Business Process Management Foundations and Engineering": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged."
+    },
+    "Computer Science Education": {
+      "primary": "有三个题目：Research into the InfoSphere module on the topic of artificial intelligence (AI) (based on the AI workshop from the School Lab EduInf at TU Dresden)\n但似乎是只给教学所学生的",
+      "secondary": "There are three topics, including: Research into the InfoSphere module on the topic of artificial intelligence (AI) (based on the AI workshop from the School Lab EduInf at TU Dresden).\nHowever, it appears to be intended only for students from the education group."
+    },
+    "Media Computing Group": {
+      "primary": "HCI，鼓励主动联系",
+      "secondary": "HCI; proactive contact is encouraged."
+    },
+    "Embedded Software": {
+      "primary": "有挺多题目",
+      "secondary": "There are quite a few topics available."
+    },
+    "High Performance Computing": {
+      "primary": "鼓励主动联系",
+      "secondary": "Proactive contact is encouraged."
+    },
+    "Software and Tools for Computational Engineering": {
+      "primary": "感觉是比较偏数学的？",
+      "secondary": "Seems to lean more toward mathematics."
+    },
+    "Virtual Reality and Immersive Visualization": {
+      "primary": "上过Basic Techniques in Computer Graphics（ws）Unreal/Unity, C++",
+      "secondary": "Should have taken Basic Techniques in Computer Graphics (winter semester).\nUnreal/Unity, C++"
+    },
+    "Computer Vision": {
+      "primary": "很高的programming要求，上过Computer Vision",
+      "secondary": "Very high programming requirements; should have taken Computer Vision."
+    },
+    "AI Methodology": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\nAutomated Machine Learning",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nAutomated Machine Learning"
+    },
+    "Quantum Information Systems": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系\n需要有相关课程经验",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged.\nRelevant course experience is required."
+    },
+    "Computational Network Science": {
+      "primary": "暂时没有放出的题目，但鼓励主动联系",
+      "secondary": "No topics are publicly listed at the moment, but proactive contact is encouraged."
+    },
+    "Management Science": {
+      "primary": "需要有：linear optimization and network algorithms\n相关课程：https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveranstaltungen-inhalt/?lidx=1",
+      "secondary": "Required background: linear optimization and network algorithms.\nRelevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveranstaltungen-inhalt/?lidx=1"
+    },
+    "Data Science in Mechanical Engineering": {
+      "primary": "",
+      "secondary": ""
+    }
+  }
+}

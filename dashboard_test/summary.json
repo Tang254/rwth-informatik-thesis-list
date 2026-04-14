@@ -1,0 +1,523 @@
+{
+  "generated_at": "2026-04-14T14:32:31+00:00",
+  "records": [
+    {
+      "name": "AI Methodology",
+      "url": "https://www.aim.rwth-aachen.de/thesis.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Business Process Management Foundations and Engineering",
+      "url": "https://bpm.rwth-aachen.de/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Combinatorial Optimization",
+      "url": "https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Communication and Distributed Systems",
+      "url": "https://www.comsys.rwth-aachen.de/teaching/available-theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computation in Neural Circuits",
+      "url": "https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computational Network Science",
+      "url": "https://www.netsci.rwth-aachen.de/teaching/papers-theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computer Animation",
+      "url": "https://animation.rwth-aachen.de/theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computer Graphics, Geometry and Multimedia",
+      "url": "https://www.graphics.rwth-aachen.de/theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computer Science Education",
+      "url": "https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Computer Vision",
+      "url": "https://www.vision.rwth-aachen.de/theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Cooperation Systems",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Data Science in Mechanical Engineering",
+      "url": "https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Data Stream Management and Analysis",
+      "url": "https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Embedded Software",
+      "url": "https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "High Performance Computing",
+      "url": "https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Information Systems and Databases",
+      "url": "https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "IT Security",
+      "url": "https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Knowledge-Based Systems",
+      "url": "https://kbsg.rwth-aachen.de/theses/open_theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Learning Technologies",
+      "url": "https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Life Science Informatics",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/digital-health.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Logic and Theory of Discrete Systems",
+      "url": "https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Machine Learning and Human Language Technology",
+      "url": "https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Machine Learning and Reasoning",
+      "url": "https://ml.rwth-aachen.de/theses/open-topics/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Machine learning on graphs",
+      "url": "https://log-rwth.github.io/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Management Science",
+      "url": "https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Mathematical Foundations of Computer Science",
+      "url": "https://logic.rwth-aachen.de/Research/index.html.en",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Media Computing Group",
+      "url": "https://hci.rwth-aachen.de/jobs",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Operating Systems",
+      "url": "https://www.os.rwth-aachen.de/teaching/theses-overview.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Process and Data Science",
+      "url": "https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Quantum Information Systems",
+      "url": "https://qis.rwth-aachen.de/teaching/thesis/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Risk Management And Decision Support",
+      "url": "https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Security and Privacy in Industrial Cooperation",
+      "url": "https://www.spice.rwth-aachen.de/teaching/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Software and Tools for Computational Engineering",
+      "url": "https://www.stce.rwth-aachen.de/theses",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Software Construction",
+      "url": "https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Software Engineering",
+      "url": "https://www.se-rwth.de/theses/BA.interpret.efficient/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Theory of Hybrid Systems",
+      "url": "https://ths.rwth-aachen.de/theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    },
+    {
+      "name": "Virtual Reality and Immersive Visualization",
+      "url": "https://vr.rwth-aachen.de/theses/",
+      "fetched_at": null,
+      "content_hash": null,
+      "source": "error",
+      "summary": {
+        "status": "error: <urlopen error [WinError 10061] \u7531\u4e8e\u76ee\u6807\u8ba1\u7b97\u673a\u79ef\u6781\u62d2\u7edd\uff0c\u65e0\u6cd5\u8fde\u63a5\u3002>",
+        "highlights": [],
+        "opening_count_estimate": 0,
+        "keyword_hits": {}
+      },
+      "content_preview": "Unable to fetch or parse this page during dashboard generation."
+    }
+  ]
+}
