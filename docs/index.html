@@ -6,14 +6,40 @@
   <title>Thesis list</title>
   <style>
     :root {
-      --bg: #f5f1e8;
+      --bg: #0c0f0d;
+      --bg-soft: #131715;
+      --surface: rgba(18, 21, 19, 0.94);
+      --surface-strong: #111412;
+      --surface-alt: #171b18;
+      --ink: #edf1ec;
+      --muted: #9da59c;
+      --accent: #2fd0a0;
+      --accent-strong: #20a97f;
+      --accent-soft: rgba(47, 208, 160, 0.12);
+      --border: rgba(237, 241, 236, 0.09);
+      --shadow: 0 22px 56px rgba(0, 0, 0, 0.34);
+      --chip: rgba(255, 255, 255, 0.04);
+      --input-bg: #141917;
+      --warning: #f4b259;
+      --table-head: #121614;
+    }
+    body[data-theme="light"] {
+      --bg: #f3f0e9;
+      --bg-soft: #ece6dc;
       --surface: rgba(255, 253, 249, 0.94);
       --surface-strong: #fffdfa;
+      --surface-alt: #f7f1e8;
       --ink: #1d1d1b;
       --muted: #6c675c;
       --accent: #135d66;
+      --accent-strong: #0f5159;
+      --accent-soft: rgba(19, 93, 102, 0.1);
       --border: rgba(29, 29, 27, 0.09);
       --shadow: 0 14px 30px rgba(62, 42, 17, 0.08);
+      --chip: rgba(19, 93, 102, 0.06);
+      --input-bg: #fffdfa;
+      --warning: #b6782f;
+      --table-head: #f2ece1;
     }
     * { box-sizing: border-box; }
     body {
@@ -21,9 +47,11 @@
       font-family: Georgia, "Times New Roman", serif;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(19,93,102,0.08), transparent 32%),
-        radial-gradient(circle at right, rgba(194,141,84,0.09), transparent 28%),
-        linear-gradient(180deg, var(--bg), #fcfaf6);
+        radial-gradient(circle at top left, rgba(47,208,160,0.08), transparent 28%),
+        radial-gradient(circle at right, rgba(244,178,89,0.09), transparent 24%),
+        linear-gradient(180deg, var(--bg), var(--bg-soft));
+      min-height: 100vh;
+      transition: background 180ms ease, color 180ms ease;
     }
     .wrap {
       width: min(1320px, calc(100vw - 32px));
@@ -31,29 +59,55 @@
       padding: 28px 0 46px;
     }
     .hero {
-      background: linear-gradient(180deg, rgba(255,253,250,0.96), rgba(247,240,228,0.98));
+      background: linear-gradient(180deg, rgba(15, 18, 16, 0.96), rgba(18, 21, 19, 0.98));
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 24px 26px 20px;
+      border-radius: 24px;
+      padding: 22px 24px 20px;
       box-shadow: var(--shadow);
       margin-bottom: 18px;
+      backdrop-filter: blur(10px);
+    }
+    body[data-theme="light"] .hero {
+      background: linear-gradient(180deg, rgba(255,253,250,0.96), rgba(247,240,228,0.98));
     }
     .hero-top {
       display: flex;
-      align-items: end;
+      align-items: center;
       justify-content: space-between;
       gap: 18px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
     .hero h1 {
       margin: 0;
       font-size: clamp(32px, 4.5vw, 50px);
       line-height: 1.02;
+      letter-spacing: -0.03em;
     }
     .meta {
       color: var(--muted);
       font-size: 13px;
       font-family: "Courier New", monospace;
       white-space: nowrap;
+    }
+    .toolbar-button {
+      border: 1px solid var(--border);
+      background: var(--chip);
+      color: var(--ink);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font: inherit;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 160ms ease, border-color 160ms ease;
+    }
+    .toolbar-button:hover {
+      background: var(--accent-soft);
+      border-color: rgba(47, 208, 160, 0.24);
     }
     .filters {
       display: grid;
@@ -77,7 +131,7 @@
     .field input {
       width: 100%;
       border: 1px solid var(--border);
-      background: #fffdfa;
+      background: var(--input-bg);
       color: var(--ink);
       border-radius: 12px;
       padding: 12px 14px;
@@ -102,7 +156,7 @@
       padding: 4px;
       border: 1px solid var(--border);
       border-radius: 14px;
-      background: #fffdfa;
+      background: var(--input-bg);
     }
     .lang-button {
       border: 0;
@@ -116,13 +170,13 @@
     }
     .lang-button.active {
       background: var(--accent);
-      color: white;
+      color: #08110d;
       font-weight: 700;
     }
     .board {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 24px;
       overflow: hidden;
       box-shadow: var(--shadow);
     }
@@ -134,7 +188,7 @@
       align-items: stretch;
     }
     .header-row {
-      background: #f2ece1;
+      background: var(--table-head);
       border-bottom: 1px solid var(--border);
     }
     .header-cell,
@@ -151,12 +205,13 @@
     .row-card {
       background: var(--surface-strong);
       border-bottom: 1px solid var(--border);
+      transition: background 150ms ease;
     }
     .row-card:last-child {
       border-bottom: 0;
     }
     .row-card:hover {
-      background: #fffaf2;
+      background: var(--surface-alt);
     }
     .row-card.hidden {
       display: none;
@@ -195,6 +250,10 @@
       font-size: 14px;
       line-height: 1.5;
     }
+    .empty {
+      color: rgba(157, 165, 156, 0.82);
+      font-style: italic;
+    }
     .requirement-list {
       margin: 0;
       padding-left: 18px;
@@ -210,26 +269,61 @@
       padding: 10px 16px;
       border-radius: 10px;
       text-decoration: none;
-      color: white;
+      color: #08110d;
       background: var(--accent);
       font-size: 14px;
       font-weight: 700;
       box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
     }
     .link:hover {
-      background: #0f5159;
+      background: var(--accent-strong);
     }
     .results-bar {
       padding: 12px 18px;
       border-bottom: 1px solid var(--border);
-      background: #faf6ef;
+      background: var(--table-head);
       color: var(--muted);
       font-size: 13px;
       font-family: "Courier New", monospace;
     }
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--chip);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .chip-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(47, 208, 160, 0.1);
+    }
+    .chip.warning .chip-dot {
+      background: var(--warning);
+      box-shadow: 0 0 0 4px rgba(244, 178, 89, 0.12);
+    }
     @media (max-width: 920px) {
       .filters {
         grid-template-columns: 1fr;
+      }
+      .hero-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero-actions {
+        width: 100%;
       }
       .header-row {
         display: none;
@@ -263,7 +357,14 @@
     <section class="hero">
       <div class="hero-top">
         <h1>Thesis list</h1>
-        <div class="meta">Generated at: 2026-04-14T17:51:59+00:00 | Total links: 37</div>
+        <div class="hero-actions">
+          <div class="meta">Generated at: 2026-04-14T18:58:42+00:00 | Total links: 37</div>
+          <button id="themeToggle" class="toolbar-button" type="button" aria-label="Toggle theme">Switch theme</button>
+        </div>
+      </div>
+      <div class="chip-row">
+        <div class="chip"><span class="chip-dot"></span>Direct links to institute pages</div>
+        <div class="chip warning"><span class="chip-dot"></span>Requirement filter searches both language versions</div>
       </div>
       <div class="filters">
         <div class="field">
@@ -1227,7 +1328,11 @@ Unreal/Unity, C++">
     const rows = Array.from(document.querySelectorAll('.row-card'));
     const langButtons = Array.from(document.querySelectorAll('.lang-button'));
     const requirementPanels = Array.from(document.querySelectorAll('.requirement-panel'));
+    const themeToggle = document.getElementById('themeToggle');
     let currentLang = 'primary';
+    let currentTheme = localStorage.getItem('thesis-theme') || 'dark';
+
+    document.body.dataset.theme = currentTheme;
 
     function renderRequirement(value) {
       const trimmed = (value || '').trim();
@@ -1265,6 +1370,12 @@ Unreal/Unity, C++">
       }
     }
 
+    function applyTheme() {
+      document.body.dataset.theme = currentTheme;
+      themeToggle.textContent = currentTheme === 'dark' ? 'Light theme' : 'Dark theme';
+      localStorage.setItem('thesis-theme', currentTheme);
+    }
+
     function applyFilters() {
       const nameNeedle = nameFilter.value.trim().toLowerCase();
       const requirementNeedle = requirementFilter.value.trim().toLowerCase();
@@ -1291,6 +1402,11 @@ Unreal/Unity, C++">
         applyLanguage();
       });
     }
+    themeToggle.addEventListener('click', () => {
+      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      applyTheme();
+    });
+    applyTheme();
     applyLanguage();
   </script>
 </body>
