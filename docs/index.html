@@ -183,7 +183,7 @@
     .header-row,
     .row-card {
       display: grid;
-      grid-template-columns: minmax(220px, 1.1fr) minmax(260px, 1.5fr) minmax(280px, 1.6fr) 110px;
+      grid-template-columns: minmax(220px, 1.15fr) minmax(300px, 1.75fr) minmax(300px, 1.7fr);
       gap: 0;
       align-items: stretch;
     }
@@ -226,8 +226,7 @@
       display: none;
     }
     .title-cell,
-    .url-cell,
-    .requirement-cell {
+    .url-cell {
       border-right: 1px solid var(--border);
     }
     h2 {
@@ -242,6 +241,22 @@
       font-size: 14px;
       line-height: 1.5;
       word-break: break-word;
+    }
+    .url-link-cell {
+      text-decoration: none;
+      color: inherit;
+    }
+    .url-link-cell:hover .url {
+      color: var(--accent);
+    }
+    .url-link-cell::after {
+      content: "Open site";
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
     }
     .requirement,
     .empty {
@@ -260,23 +275,6 @@
       color: var(--muted);
       font-size: 14px;
       line-height: 1.5;
-    }
-    .action-cell {
-      align-items: flex-start;
-    }
-    .link {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #08110d;
-      background: var(--accent);
-      font-size: 14px;
-      font-weight: 700;
-      box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
-    }
-    .link:hover {
-      background: var(--accent-strong);
     }
     .results-bar {
       padding: 12px 18px;
@@ -332,10 +330,12 @@
         grid-template-columns: 1fr;
       }
       .title-cell,
-      .url-cell,
-      .requirement-cell {
+      .url-cell {
         border-right: 0;
         border-bottom: 1px solid var(--border);
+      }
+      .requirement-cell {
+        border-right: 0;
       }
       .label {
         display: block;
@@ -346,9 +346,6 @@
         color: var(--muted);
         font-weight: 700;
       }
-      .action-cell {
-        min-height: 76px;
-      }
     }
   </style>
 </head>
@@ -358,7 +355,7 @@
       <div class="hero-top">
         <h1>Thesis list</h1>
         <div class="hero-actions">
-          <div class="meta">Generated at: 2026-04-14T18:58:42+00:00 | Total links: 37</div>
+          <div class="meta">Generated at: 2026-04-14T19:06:35+00:00 | Total links: 37</div>
           <button id="themeToggle" class="toolbar-button" type="button" aria-label="Toggle theme">Switch theme</button>
         </div>
       </div>
@@ -390,7 +387,6 @@
         <div class="header-cell">Title</div>
         <div class="header-cell">URL</div>
         <div class="header-cell">Requirement</div>
-        <div class="header-cell">Open</div>
       </div>
       
 <article class="row-card" data-name="ai methodology" data-requirement="暂时没有放出的题目，但鼓励主动联系 automated machine learning no topics are publicly listed at the moment, but proactive contact is encouraged. automated machine learning">
@@ -398,10 +394,10 @@
     <div class="label">Title</div>
     <h2>AI Methodology</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.aim.rwth-aachen.de/thesis.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.aim.rwth-aachen.de/thesis.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -412,10 +408,6 @@ Automated Machine Learning">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>Automated Machine Learning</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.aim.rwth-aachen.de/thesis.html" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -424,10 +416,10 @@ Automated Machine Learning">
     <div class="label">Title</div>
     <h2>Business Process Management Foundations and Engineering</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://bpm.rwth-aachen.de/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://bpm.rwth-aachen.de/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -435,10 +427,6 @@ Automated Machine Learning">
          data-secondary="No topics are publicly listed at the moment, but proactive contact is encouraged.">
       <p class="requirement">暂时没有放出的题目，但鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://bpm.rwth-aachen.de/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -448,10 +436,10 @@ Automated Machine Learning">
     <div class="label">Title</div>
     <h2>Combinatorial Optimization</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -459,10 +447,6 @@ Automated Machine Learning">
          data-secondary="No topics are publicly listed at the moment, but proactive contact is encouraged.">
       <p class="requirement">暂时没有放出的题目，但鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://combi.rwth-aachen.de/en/teaching/past-and-ongoing-theses" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -472,10 +456,10 @@ Automated Machine Learning">
     <div class="label">Title</div>
     <h2>Communication and Distributed Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.comsys.rwth-aachen.de/teaching/available-theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.comsys.rwth-aachen.de/teaching/available-theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -486,10 +470,6 @@ PDF abstract, transcript, and expected thesis timeline">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>PDF abstract, 成绩单，thesis时间需求</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.comsys.rwth-aachen.de/teaching/available-theses/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -498,10 +478,10 @@ PDF abstract, transcript, and expected thesis timeline">
     <div class="label">Title</div>
     <h2>Computation in Neural Circuits</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -512,10 +492,6 @@ Information processing and learning in neuronal networks, high-performance simul
       <ul class="requirement-list"><li>Computation in Neural Circuits</li><li>Information processing and learning in neuronal networks, high performance simulation software and related ecosystem, algorithms for neuromorphic computing</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.fz-juelich.de/en/ias/ias-6/karriere?expand=translations,fzjsettings,nearest-institut" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -524,10 +500,10 @@ Information processing and learning in neuronal networks, high-performance simul
     <div class="label">Title</div>
     <h2>Computational Network Science</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.netsci.rwth-aachen.de/teaching/papers-theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.netsci.rwth-aachen.de/teaching/papers-theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -535,10 +511,6 @@ Information processing and learning in neuronal networks, high-performance simul
          data-secondary="No topics are publicly listed at the moment, but proactive contact is encouraged.">
       <p class="requirement">暂时没有放出的题目，但鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.netsci.rwth-aachen.de/teaching/papers-theses/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -548,10 +520,10 @@ Information processing and learning in neuronal networks, high-performance simul
     <div class="label">Title</div>
     <h2>Computer Animation</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://animation.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://animation.rwth-aachen.de/theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -562,10 +534,6 @@ C/C++">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>C/C++</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://animation.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -574,10 +542,10 @@ C/C++">
     <div class="label">Title</div>
     <h2>Computer Graphics, Geometry and Multimedia</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.graphics.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.graphics.rwth-aachen.de/theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -588,10 +556,6 @@ Should have taken Basic Techniques in Computer Graphics (winter semester)">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>上过Basic Techniques in Computer Graphics（ws）</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.graphics.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -600,10 +564,10 @@ Should have taken Basic Techniques in Computer Graphics (winter semester)">
     <div class="label">Title</div>
     <h2>Computer Science Education</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -614,10 +578,6 @@ However, it appears to be intended only for students from the education group.">
       <ul class="requirement-list"><li>有三个题目：Research into the InfoSphere module on the topic of artificial intelligence (AI) (based on the AI workshop from the School Lab EduInf at TU Dresden)</li><li>但似乎是只给教学所学生的</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.ddi.rwth-aachen.de/cms/ddi/studium/~bdsczx/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -626,10 +586,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Computer Vision</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.vision.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.vision.rwth-aachen.de/theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -637,10 +597,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="Very high programming requirements; should have taken Computer Vision.">
       <p class="requirement">很高的programming要求，上过Computer Vision</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.vision.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -650,10 +606,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Cooperation Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -661,10 +617,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="">
       <span class="empty">No requirement notes recorded.</span>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/cooperation-systems.html" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -674,10 +626,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Data Science in Mechanical Engineering</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -685,10 +637,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="">
       <span class="empty">No requirement notes recorded.</span>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.dsme.rwth-aachen.de/cms/DSME/studium/~jmmsd/Projekte-fuer-Studierende/lidx/1/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -698,10 +646,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Data Stream Management and Analysis</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -709,10 +657,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="">
       <span class="empty">No requirement notes recorded.</span>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -722,10 +666,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Embedded Software</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -733,10 +677,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="There are quite a few topics available.">
       <p class="requirement">有挺多题目</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.embedded.rwth-aachen.de/go/id/bfkaet/lidx/1" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -746,10 +686,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>High Performance Computing</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -757,10 +697,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="Proactive contact is encouraged.">
       <p class="requirement">鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.i12.rwth-aachen.de/cms/i12/studium/Studien-und-Abschlussarbeiten/~noar/HPC/?lidx=1" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -770,10 +706,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Information Systems and Databases</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -781,10 +717,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="No topics are currently listed, and proactive contact was not observed.">
       <p class="requirement">暂时没有放出的题目，未见主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://dbis.rwth-aachen.de/dbis/index.php/academics/thesis-projects/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -794,10 +726,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>IT Security</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -805,10 +737,6 @@ However, it appears to be intended only for students from the education group.">
          data-secondary="Security Education for Children">
       <p class="requirement">Security Education for Children</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.itsec.rwth-aachen.de/cms/ITSEC/Studium/~ehprm/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -818,10 +746,10 @@ However, it appears to be intended only for students from the education group.">
     <div class="label">Title</div>
     <h2>Knowledge-Based Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://kbsg.rwth-aachen.de/theses/open_theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://kbsg.rwth-aachen.de/theses/open_theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -832,10 +760,6 @@ High grades in courses such as MaLo/BuK">
       <ul class="requirement-list"><li>暂时没有放出的题目，未见主动联系</li><li>MaLo/BuK等高绩点</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://kbsg.rwth-aachen.de/theses/open_theses/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -844,10 +768,10 @@ High grades in courses such as MaLo/BuK">
     <div class="label">Title</div>
     <h2>Learning Technologies</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -855,10 +779,6 @@ High grades in courses such as MaLo/BuK">
          data-secondary="Learning Technologies group; you can also consider proposing your own topic, for example development related to self-learning platforms.">
       <p class="requirement">教育所，可以自己考虑题目（自学平台之类的开发？）</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://learntech.rwth-aachen.de/cms/LearnTech/studium/Studien-und-Abschlussarbeiten/~jixr/Offene-Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -868,10 +788,10 @@ High grades in courses such as MaLo/BuK">
     <div class="label">Title</div>
     <h2>Life Science Informatics</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.fit.fraunhofer.de/en/business-areas/digital-health.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.fit.fraunhofer.de/en/business-areas/digital-health.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -879,10 +799,6 @@ High grades in courses such as MaLo/BuK">
          data-secondary="">
       <span class="empty">No requirement notes recorded.</span>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/digital-health.html" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -892,10 +808,10 @@ High grades in courses such as MaLo/BuK">
     <div class="label">Title</div>
     <h2>Logic and Theory of Discrete Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -906,10 +822,6 @@ At least one elective course">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>至少一门选修课</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.lics.rwth-aachen.de/cms/lics/studium/~ocge/Abschluss-Arbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -918,10 +830,10 @@ At least one elective course">
     <div class="label">Title</div>
     <h2>Machine Learning and Human Language Technology</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -932,10 +844,6 @@ ASR, NLU">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>ASR, NLU</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www-i6.informatik.rwth-aachen.de/web/Topics_for_Theses_Hiwi/index.html" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -944,10 +852,10 @@ ASR, NLU">
     <div class="label">Title</div>
     <h2>Machine Learning and Reasoning</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://ml.rwth-aachen.de/theses/open-topics/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://ml.rwth-aachen.de/theses/open-topics/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -958,10 +866,6 @@ Four months of full-time work and at least one relevant course">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>4个月的全职工作，至少一门相关的课</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://ml.rwth-aachen.de/theses/open-topics/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -970,10 +874,10 @@ Four months of full-time work and at least one relevant course">
     <div class="label">Title</div>
     <h2>Machine learning on graphs</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://log-rwth.github.io/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://log-rwth.github.io/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -981,10 +885,6 @@ Four months of full-time work and at least one relevant course">
          data-secondary="No topics are publicly listed at the moment, but proactive contact is encouraged.">
       <p class="requirement">暂时没有放出的题目，但鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://log-rwth.github.io/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -994,10 +894,10 @@ Four months of full-time work and at least one relevant course">
     <div class="label">Title</div>
     <h2>Management Science</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1008,10 +908,6 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
       <ul class="requirement-list"><li>需要有：linear optimization and network algorithms</li><li>相关课程：https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveranstaltungen-inhalt/?lidx=1</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.oms.rwth-aachen.de/cms/OMS/studium/~gifs/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1020,10 +916,10 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
     <div class="label">Title</div>
     <h2>Mathematical Foundations of Computer Science</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://logic.rwth-aachen.de/Research/index.html.en" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://logic.rwth-aachen.de/Research/index.html.en</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1031,10 +927,6 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
          data-secondary="No topics are currently listed, and proactive contact was not observed.">
       <p class="requirement">暂时没有放出的题目，未见主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://logic.rwth-aachen.de/Research/index.html.en" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -1044,10 +936,10 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
     <div class="label">Title</div>
     <h2>Media Computing Group</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://hci.rwth-aachen.de/jobs" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://hci.rwth-aachen.de/jobs</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1055,10 +947,6 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
          data-secondary="HCI; proactive contact is encouraged.">
       <p class="requirement">HCI，鼓励主动联系</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://hci.rwth-aachen.de/jobs" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -1068,10 +956,10 @@ Relevant courses: https://www.oms.rwth-aachen.de/cms/OMS/Studium/~gfmz/Lehrveran
     <div class="label">Title</div>
     <h2>Operating Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.os.rwth-aachen.de/teaching/theses-overview.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.os.rwth-aachen.de/teaching/theses-overview.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1082,10 +970,6 @@ English, abstract, transcript">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励自带题目</li><li>English, abstract, 成绩单</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.os.rwth-aachen.de/teaching/theses-overview.html" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1094,10 +978,10 @@ English, abstract, transcript">
     <div class="label">Title</div>
     <h2>Process and Data Science</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1108,10 +992,6 @@ Rust, Python, Java, React">
       <ul class="requirement-list"><li>有四个题目，但是都需要process mining的知识</li><li>Rust, Python, Java, React</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.pads.rwth-aachen.de/cms/PADS/studium/~pncl/Abschlussarbeiten/lidx/1/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1120,10 +1000,10 @@ Rust, Python, Java, React">
     <div class="label">Title</div>
     <h2>Quantum Information Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://qis.rwth-aachen.de/teaching/thesis/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://qis.rwth-aachen.de/teaching/thesis/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1134,10 +1014,6 @@ Relevant course experience is required.">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>需要有相关课程经验</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://qis.rwth-aachen.de/teaching/thesis/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1146,10 +1022,10 @@ Relevant course experience is required.">
     <div class="label">Title</div>
     <h2>Risk Management And Decision Support</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1157,10 +1033,6 @@ Relevant course experience is required.">
          data-secondary="">
       <span class="empty">No requirement notes recorded.</span>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.fit.fraunhofer.de/en/business-areas/microsimulation-and-econometric-data-analysis/teaching.html" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -1170,10 +1042,10 @@ Relevant course experience is required.">
     <div class="label">Title</div>
     <h2>Security and Privacy in Industrial Cooperation</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.spice.rwth-aachen.de/teaching/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.spice.rwth-aachen.de/teaching/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1184,10 +1056,6 @@ Python, C, and basic security knowledge">
       <ul class="requirement-list"><li>暂时没有放出的题目，但鼓励主动联系</li><li>Python, C, basic knowledge of security</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.spice.rwth-aachen.de/teaching/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1196,10 +1064,10 @@ Python, C, and basic security knowledge">
     <div class="label">Title</div>
     <h2>Software and Tools for Computational Engineering</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.stce.rwth-aachen.de/theses" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.stce.rwth-aachen.de/theses</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1207,10 +1075,6 @@ Python, C, and basic security knowledge">
          data-secondary="Seems to lean more toward mathematics.">
       <p class="requirement">感觉是比较偏数学的？</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.stce.rwth-aachen.de/theses" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -1220,10 +1084,10 @@ Python, C, and basic security knowledge">
     <div class="label">Title</div>
     <h2>Software Construction</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1231,10 +1095,6 @@ Python, C, and basic security knowledge">
          data-secondary="Evaluating Key Factors in Organizational Modernization">
       <p class="requirement">Evaluating Key Factors in Organizational Modernization</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://swc.rwth-aachen.de/theses/evaluating-key-factors-in-organizational-modernization/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 
@@ -1244,10 +1104,10 @@ Python, C, and basic security knowledge">
     <div class="label">Title</div>
     <h2>Software Engineering</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://www.se-rwth.de/theses/BA.interpret.efficient/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://www.se-rwth.de/theses/BA.interpret.efficient/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1262,10 +1122,6 @@ Prior knowledge of interpreters">
       <ul class="requirement-list"><li>Efficient Interpretation of Expressions and Statements in MontiCore</li><li>Interest in compiler design and type systems</li><li>Lecture SLE</li><li>Prior knowledge regarding interpreters</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://www.se-rwth.de/theses/BA.interpret.efficient/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1274,10 +1130,10 @@ Prior knowledge of interpreters">
     <div class="label">Title</div>
     <h2>Theory of Hybrid Systems</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://ths.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://ths.rwth-aachen.de/theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1288,10 +1144,6 @@ A strong interest in mathematics and formal methods">
       <ul class="requirement-list"><li>Hybrid systems verification</li><li>a strong interest in mathematics and formal methods</li></ul>
     </div>
   </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://ths.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open</a>
-  </div>
 </article>
 
 
@@ -1300,10 +1152,10 @@ A strong interest in mathematics and formal methods">
     <div class="label">Title</div>
     <h2>Virtual Reality and Immersive Visualization</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="https://vr.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">https://vr.rwth-aachen.de/theses/</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -1312,10 +1164,6 @@ A strong interest in mathematics and formal methods">
 Unreal/Unity, C++">
       <p class="requirement">上过Basic Techniques in Computer Graphics（ws）Unreal/Unity, C++</p>
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="https://vr.rwth-aachen.de/theses/" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 

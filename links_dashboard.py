@@ -178,10 +178,10 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
     <div class="label">Title</div>
     <h2>{html.escape(item["name"])}</h2>
   </div>
-  <div class="cell url-cell">
+  <a class="cell url-cell url-link-cell" href="{html.escape(item["url"])}" target="_blank" rel="noreferrer">
     <div class="label">URL</div>
     <p class="url">{html.escape(item["url"])}</p>
-  </div>
+  </a>
   <div class="cell requirement-cell">
     <div class="label">Requirement</div>
     <div class="requirement-panel"
@@ -189,10 +189,6 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
          data-secondary="{html.escape(item["requirement_secondary"])}">
       {render_requirement(item["requirement_primary"])}
     </div>
-  </div>
-  <div class="cell action-cell">
-    <div class="label">Open</div>
-    <a class="link" href="{html.escape(item["url"])}" target="_blank" rel="noreferrer">Open</a>
   </div>
 </article>
 """
@@ -384,7 +380,7 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
     .header-row,
     .row-card {{
       display: grid;
-      grid-template-columns: minmax(220px, 1.1fr) minmax(260px, 1.5fr) minmax(280px, 1.6fr) 110px;
+      grid-template-columns: minmax(220px, 1.15fr) minmax(300px, 1.75fr) minmax(300px, 1.7fr);
       gap: 0;
       align-items: stretch;
     }}
@@ -427,8 +423,7 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
       display: none;
     }}
     .title-cell,
-    .url-cell,
-    .requirement-cell {{
+    .url-cell {{
       border-right: 1px solid var(--border);
     }}
     h2 {{
@@ -443,6 +438,22 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
       font-size: 14px;
       line-height: 1.5;
       word-break: break-word;
+    }}
+    .url-link-cell {{
+      text-decoration: none;
+      color: inherit;
+    }}
+    .url-link-cell:hover .url {{
+      color: var(--accent);
+    }}
+    .url-link-cell::after {{
+      content: "Open site";
+      margin-top: 10px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
     }}
     .requirement,
     .empty {{
@@ -461,23 +472,6 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
       color: var(--muted);
       font-size: 14px;
       line-height: 1.5;
-    }}
-    .action-cell {{
-      align-items: flex-start;
-    }}
-    .link {{
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      color: #08110d;
-      background: var(--accent);
-      font-size: 14px;
-      font-weight: 700;
-      box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
-    }}
-    .link:hover {{
-      background: var(--accent-strong);
     }}
     .results-bar {{
       padding: 12px 18px;
@@ -533,10 +527,12 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
         grid-template-columns: 1fr;
       }}
       .title-cell,
-      .url-cell,
-      .requirement-cell {{
+      .url-cell {{
         border-right: 0;
         border-bottom: 1px solid var(--border);
+      }}
+      .requirement-cell {{
+        border-right: 0;
       }}
       .label {{
         display: block;
@@ -546,9 +542,6 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
         letter-spacing: 0.12em;
         color: var(--muted);
         font-weight: 700;
-      }}
-      .action-cell {{
-        min-height: 76px;
       }}
     }}
   </style>
@@ -591,7 +584,6 @@ def render_page(items: list[dict[str, str]], generated_at: str, labels: dict[str
         <div class="header-cell">Title</div>
         <div class="header-cell">URL</div>
         <div class="header-cell">Requirement</div>
-        <div class="header-cell">Open</div>
       </div>
       {rows}
     </section>
